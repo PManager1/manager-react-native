@@ -7,9 +7,11 @@ import reducers from './reducers';
 const App = () => {
   return (
     <Provider store={createStore(reducers)}>
-      <Text>
-        Hello!
-      </Text>
+      <View>
+        <Text>
+          Hello!
+        </Text>
+      </View>
     </Provider>
   );
 };
