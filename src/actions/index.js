@@ -1,8 +1,9 @@
-import { EMAIL_CHANGED } from './types'; 
 
+// when email changes
 export const emailChanged = (text) => {
-  return {
-      type: 'email_changed',
-      payload: text
-  };
+  // we wanna call this action
+    return {
+        type: 'email_changed',
+        payload: text
+    };
 };
