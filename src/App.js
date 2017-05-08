@@ -11,12 +11,12 @@ import LoginForm from './components/LoginForm';
 class App extends Component {
   componentWillMount() {
     var config = {
-        apiKey: "AIzaSyDyLCcGUO5pWRpLUAoswONEZhwQ8iW0t1I",
-        authDomain: "authentication-18257.firebaseapp.com",
-        databaseURL: "https://authentication-18257.firebaseio.com",
-        projectId: "authentication-18257",
-        storageBucket: "authentication-18257.appspot.com",
-        messagingSenderId: "1086509504112"
+        apiKey: "AIzaSyCtg_E7mrkRJv-_UslRv7i-bYT021twedc",
+        authDomain: "auth-a0248.firebaseapp.com",
+        databaseURL: "https://auth-a0248.firebaseio.com",
+        projectId: "auth-a0248",
+        storageBucket: "auth-a0248.appspot.com",
+        messagingSenderId: "547783113798"
       };
       firebase.initializeApp(config);
   }
