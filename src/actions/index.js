@@ -22,7 +22,8 @@ export const loginUser = ({ email, password }) => {
   return (dispatch) => {
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then(user => loginUserSuccess(dispatch, user))
-    .catch(() => {
+    .catch((error) => {
+        console.log('26- error =', error);
         firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(user => loginUserSuccess(dispatch, user))
     .catch(()=> loginUserFail(dispatch));
