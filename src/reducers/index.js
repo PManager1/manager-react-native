@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import AuthReducer from './AuthReducer';
+import EmployeeFormReducer from './employeeFormReducer';
+// import EmployeeFormReducer2 from './EmployeeFormReducer';
+// import EmployeeFormReducer from './EmployeeFormReducer';
 
 export default combineReducers({
-  // banana: () => []
-  // means auth peace of state is produced by auth reducer. 
-  auth: AuthReducer
+  auth: AuthReducer,
+  employeeForm: EmployeeFormReducer
 });
