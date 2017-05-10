@@ -11,10 +11,39 @@ const RouterComponent = () => {
       </Scene>
 
       <Scene key="main">
-          <Scene key="employeeList" component={EmployeeList} title="Employees" />
+          <Scene
+          onRight={() => console.log(' on Right clicked!!!')}
+          rightTitle="Add"
+          key="employeeList"
+          component={EmployeeList}
+          title="Employees"
+          />
       </Scene>
 
     </Router>
   );
 };
 export default RouterComponent;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
