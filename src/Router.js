@@ -18,7 +18,7 @@ const RouterComponent = () => {
           rightTitle="Add"
           key="employeeList"
           component={EmployeeList}
-          title="Employees"
+          title="Properties"
           />
 
       <Scene
@@ -26,14 +26,14 @@ const RouterComponent = () => {
       rightTitle="insideCreate"
       key="employeeCreate"
       component={EmployeeCreate}
-      title="Create Employee"
+      title="Create Property"
       />
       <Scene
       onRight={() => console.log(' on Right clicked!!!')}
       rightTitle="right Tap"
       key="employeeEdit"
       component={EmployeeEdit}
-      title="Edit Employee"
+      title="Edit Property"
       />
   </Scene>
 
