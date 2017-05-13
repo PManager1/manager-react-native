@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import Communications from 'react-native-communications';
 import React, { Component } from 'react';
 import { Card, CardSection, Input, Button } from './common';
 import { connect } from 'react-redux';
@@ -22,6 +23,11 @@ class EmployeeEdit extends Component {
     this.props.employeeSave({ name, phone, shift, uid: this.props.employee.uid })
   }
 
+  onTextPress(){
+    const { phone, shift } = this.props;
+    Communications.text(phone, `Whats the status of the property 152 Miami Gardens ? $(shift)`);
+  }
+
   render(){
     return(
         <Card>
@@ -31,6 +37,13 @@ class EmployeeEdit extends Component {
                 Save changes
               </Button>
             </CardSection>
+
+            <CardSection>
+              <Button onPress={this.onTextPress.bind(this)}>
+                  Text 2 Agent
+              </Button>
+            </CardSection>
+
         </Card>
     );
   }

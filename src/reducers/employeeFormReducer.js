@@ -17,7 +17,7 @@ export default (state = INITIAL_STATE, action) => {
       case EMPLOYEE_CREATE:
         return INITIAL_STATE;
       case EMPLOYEE_SAVE_SUCCESS:
-        return INITIAL_STATE;      
+        return INITIAL_STATE;
     default:
       return state;
     }
