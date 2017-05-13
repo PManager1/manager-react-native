@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
-import { Picker } from 'react-native';
+// import { Text } from 'react-native';
+// import { Picker } from 'react-native';
 import { Card, CardSection, Input, Button } from './common';
 import { connect } from 'react-redux';
-
 import { employeeUpdate, employeeCreate } from '../actions';
+import EmployeeForm from './EmployeeForm';
 
 class EmployeeCreate extends Component {
 
@@ -19,50 +19,12 @@ class EmployeeCreate extends Component {
 
     return(
       <Card>
-
-      <CardSection>
-        <Input
-          label="Name"
-          placeholder="Jane"
-          value={this.props.name}
-          onChangeText={ text => this.props.employeeUpdate( { prop: 'name', value: text })}
-        />
-      </CardSection>
-
-      <CardSection>
-      <Input
-        label="Phone no"
-        placeholder="999-999-9999"
-        value={this.props.phone}
-        onChangeText={ text => this.props.employeeUpdate( { prop: 'phone', value: text })}
-      />
-      </CardSection>
-
-      <CardSection style={{ flexDirection: 'column' }} >
-        <Text style={styles.pickerTextStyle}>
-          Shift
-        </Text>
-        <Picker
-          style={{ flex: 1 }}
-          selectedValue={this.props.shift}
-          onValueChange={day => this.props.employeeUpdate({ props: 'shift', value: day }) }
-        >
-        <Picker.Item label="Sunday" value="Sunday" />
-            <Picker.Item label="Tuesday" value="Tuesday" />
-            <Picker.Item label="Wednesday" value="Wednesday" />
-            <Picker.Item label="Thursday" value="Thursday" />
-            <Picker.Item label="Friday" value="Friday" />
-            <Picker.Item label="Saturday" value="Saturday" />
-            <Picker.Item label="Sunday" value="Sunday" />
-          </Picker>
-      </CardSection>
-
-      <CardSection>
-        <Button onPress={this.onButtonPress.bind(this)}>
-          Create
-        </Button>
-      </CardSection>
-
+        <EmployeeForm />
+        <CardSection>
+          <Button onPress={this.onButtonPress.bind(this)}>
+            Create
+          </Button>
+        </CardSection>
       </Card>
     );
   }
