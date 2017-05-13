@@ -1,7 +1,7 @@
 import firebase from 'firebase';
 import { Actions } from 'react-native-router-flux';
 //  one action to handle any update.
-import { EMPLOYEE_UPDATE, EMPLOYEE_CREATE, EMPLOYEES_FETCH_SUCCESS } from './types';
+import { EMPLOYEE_UPDATE, EMPLOYEE_CREATE, EMPLOYEES_FETCH_SUCCESS, EMPLOYEE_SAVE_SUCCESS } from './types';
 
 
 
@@ -45,7 +45,8 @@ return (dispatch)=> {
   firebase.database().ref(`/users/${currentUser.uid}/employees/${uid}`)
   .set({ name, phone, shift })
   .then (() => {
-        Actions.employeeList({ type: 'reset' });  // so that im not adding on top o f the stacknav . 
+      dispatch ({ type: EMPLOYEE_SAVE_SUCCESS });
+        Actions.employeeList({ type: 'reset' });  // so that im not adding on top o f the stacknav .
   });
   };
 };
