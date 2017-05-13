@@ -44,6 +44,8 @@ export const employeeSave = ({ name, phone, shift, uid }) =>  {
 return (dispatch)=> {
   firebase.database().ref(`/users/${currentUser.uid}/employees/${uid}`)
   .set({ name, phone, shift })
-  .then (() => console.log(' saved !'));
+  .then (() => {
+        Actions.employeeList({ type: 'reset' });  // so that im not adding on top o f the stacknav . 
+  });
   };
 };
