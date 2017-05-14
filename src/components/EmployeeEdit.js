@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import Communications from 'react-native-communications';
 import React, { Component } from 'react';
-import { Card, CardSection, Input, Button } from './common';
+import { Card, CardSection, Input, Button, Confirm } from './common';
 import { connect } from 'react-redux';
 import { employeeUpdate, employeeSave } from '../actions';
 import EmployeeForm from './EmployeeForm';
@@ -43,6 +43,12 @@ class EmployeeEdit extends Component {
                   Text 2 Agent
               </Button>
             </CardSection>
+
+
+            <Confirm>
+              Are you sure you want to delete this ?
+            </Confirm>
+
 
         </Card>
     );
